@@ -1,14 +1,21 @@
 package se.lexicon.C.E.java;
 
+import java.util.Random;
 import java.util.Scanner;
 
+import static java.awt.SystemColor.menu;
 
-    public class Currency_ExchangeDemo {
+
+public class Currency_ExchangeDemo {
 
         public static void main(String[] args) {
-            System.out.println("1 Sek");
-            System.out.println("2 Dollar");
-            System.out.println("3 Euro");
+            System.out.println("Currency Converter App:");
+            System.out.println("1. Sek");
+            System.out.println("2. Dollar");
+            System.out.println("3. Euro");
+            System.out.println("0. Exit");
+
+
 
             // take input
             Scanner sc = new Scanner(System.in);
@@ -16,6 +23,9 @@ import java.util.Scanner;
             int choice = sc.nextInt();
             System.out.println("Enter the amount");
             double amount = sc.nextDouble();
+
+
+
             // convert the amount
             switch (choice) {
                 case 1:
@@ -27,9 +37,11 @@ import java.util.Scanner;
                 case 3:
                     Euro_to_other(amount);
                     break;
-
                  default:
-                    System.out.println("Invalid choice");
+                case 0:
+
+                    break;
+
             }
 
         }
